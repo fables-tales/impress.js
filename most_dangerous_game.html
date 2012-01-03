@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 and Internet Explorer 10 <i>should</i> also handle it.</p>
+    </div>
+
+    <div id="bored" class="step" data-x="-800" data-y="-1500" data-scale="1">
+        <center>
+            <h1>The Most Dangerous Game:</h1>
+            <h1>Exposing Sixth-Formers to Power Tools</h1>
+        </center>
+    </div>
+
+    <div id="fucking-container" class="step" data-x="-200" data-y="-1500" data-rotate="90">
+        <center>
+            <h1>I</h1>
+            <p><span style="font-size:190px" id="fucking">F</span></p>
+            <h1>love robots</h1>
+        </center>
+    </div>
+    <div class="step" data-x="-200" data-y="-500" data-rotate="90">
+        <center>
+            <img src="droppedImage-5.png" width="800">
+        </center>
+    </div>
+    <div id="its-in-3d" class="step" data-x="0" data-y="-500" data-z="-300" data-rotate-x="90" data-rotate-y="90" data-scale="1">
+        <center>
+            <img src="insane-people.png" width="600">
+            <p>3d :O</p>
+        </center>
+    </div>
+    <div class="step" data-x="-600" data-y="0" data-z="-300" data-rotate-x="90" data-rotate-y="180" data-scale="1">
+        <center>
+            <img src="robot.png" width="800">
+        </center> 
+    </div>
+    <div class="step" data-x="-600" data-y="0" data-z="400" data-rotate-x="180" data-rotate-y="180" data-scale="1">
+        <center>
+            <h1>samphippen@googlemail.com</h1>
+            <h1>@fnzcuvccra</h1>
+        </center> 
+    </div>
+
+
+</div>
+
+
+<script src="js/impress.js"></script>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+    
+    var count = 1;
+    var loopcount = 0;
+    var sleepcount = 12;
+    
+    function f() {
+        fucking = "FUCKING"
+        
+        if (loopcount++ > sleepcount) {
+            if ($("#fucking-container").attr("class").indexOf("active") != -1) {
+                if (count <= fucking.length) {
+                    $("#fucking").text("F" + fucking.substring(1, count))
+                    count += 1;
+                } 
+            }
+        }
+    }
+
+    setInterval(f, 200)
+</script>
+</body>
+</html>
