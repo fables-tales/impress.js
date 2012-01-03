@@ -38,6 +38,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
+h1 {
+    font-size:60px;
+}
+
 body {
     line-height: 1;
 }
